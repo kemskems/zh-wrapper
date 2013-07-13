@@ -44,11 +44,15 @@ public class ZHMain
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 		ZHConverter converter = ZHConverter.getInstance(type);
 		String str;
+		int lineNumber = 1;
 		try
 		{
 			while ((str = in.readLine()) != null)
 			{
+				System.err.println("LINE " + (lineNumber++));
+				System.err.println("READS: " + str);
 				String convertedStr = converter.convert(str);
+				System.err.println("CONVERTED TO: " + convertedStr + "\n");
 				out.write(convertedStr);
 				out.newLine();
 			}
