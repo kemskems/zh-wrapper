@@ -8,3 +8,7 @@
 # Sublime Project Files #
 *.sublime-project
 *.sublime-workspace
+
+# Vim-generated files #
+*~
+*.swp
